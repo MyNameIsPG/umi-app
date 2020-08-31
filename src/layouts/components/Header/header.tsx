@@ -6,7 +6,9 @@ export default () => {
   return (
     <div className={styles.fixedHeader}>
       <div className={styles.headerNavFlex}>
-        <MenuFoldOutlined />
+        <div className={styles.headerLeft}>
+          <MenuFoldOutlined />
+        </div>
       </div>
     </div>
   );

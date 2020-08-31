@@ -1,10 +1,15 @@
 import { defineConfig } from 'umi';
+import { resolve } from 'path';
 
 export default defineConfig({
   nodeModulesTransform: {
     type: 'none',
   },
+  alias: {
+    components: resolve(__dirname, './src/components'),
+  },
   routes: [
+    { path: '/', component: '@/layouts' },
     {
       path: '/home', component: '@/layouts', routes: [
         { name: 'login', path: '/home/test', component: '@/pages/test' },
@@ -13,5 +18,5 @@ export default defineConfig({
     },
     { path: '/login', component: '@/pages/login' }
   ],
-  title: '链接图标'
+  title: 'admin'
 });
